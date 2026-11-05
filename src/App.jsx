@@ -23,6 +23,7 @@ const reels = [
     number: "02",
     title: "When AI deepfakes give a first glance of policy",
     description: "A first look at deepfakes used in geopolitical setting.",
+    videoSrc: "/videos/trump-gaza.mp4",
   },
   {
     type: "text",
@@ -38,6 +39,7 @@ const reels = [
     number: "04",
     title: "Just a joke?",
     description: "Can a humorous deepfake also shape political perceptions? Or is harmless internet humour? (Brinck)",
+    videoSrc: "/videos/",
   },
   {
     type: "text",
@@ -61,6 +63,7 @@ const reels = [
     number: "07",
     title: "Do non-state actors have as much impact as politicians when creating deepfakes?",
     description: "How does this video shape the perception of politicians?",
+    videoSrc: "/videos/bidendeepfake2.mp4",
   },
   {
     type: "text",
@@ -76,6 +79,7 @@ const reels = [
     number: "09",
     title: "Creating caricatures of Politicians",
     description: "Does this make us more engaged in politics, as it gives us a reason to relate to something?",
+    videoSrc: "/videos/finland-minecraft.mp4",
   },
   {
     type: "text",
@@ -130,16 +134,19 @@ function Reel({ reel }) {
               </>
             )}
             {reel.type === "video" && (
-            <div className="video-placeholder">
-                <div className="video-overlay">
-                  <span className="play-icon">▶</span>
-                  <p>VIDEO WILL GO HERE</p>
-              </div>
-              <div className="video-caption">
-                <p>{reel.title}</p>
-                <small>{reel.description}</small>
-              </div>
-            </div>
+  <div className="video-placeholder">
+    <video
+      className="video-player"
+      src={reel.videoSrc}
+      controls
+      playsInline
+      preload="metadata"
+    />
+    <div className="video-caption">
+      <p>{reel.title}</p>
+      <small>{reel.description}</small>
+    </div>
+  </div>
 )}
           </>
         )}
