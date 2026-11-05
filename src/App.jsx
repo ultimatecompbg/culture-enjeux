@@ -147,7 +147,7 @@ function Reel({ reel }) {
 
       <div className="reel-bottom">
         <span>POLITICS · TECHNOLOGY · SOCIETY</span>
-        <span>{reel.number} / 06</span>
+        <span>{reel.number} / 12</span>
       </div>
     </section>
   );
