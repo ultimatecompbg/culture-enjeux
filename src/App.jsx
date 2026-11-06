@@ -44,6 +44,7 @@ const reels = [
     number: "02",
     title: "When AI deepfakes give a first glance of policy",
     description: "A first look at deepfakes used in geopolitical setting.",
+    videoSrc: "/videos/trump-gaza.mp4",
   },
   {
     type: "text",
@@ -82,6 +83,7 @@ const reels = [
     number: "07",
     title: "Do non-state actors have as much impact as politicians when creating deepfakes?",
     description: "Does the deepfake influence voter behaviour?",
+    videoSrc: "/videos/bidendeepfake2.mp4",
   },
   {
     type: "text",
@@ -92,24 +94,32 @@ const reels = [
     note: "Deepfakes made by politicians, gain attention + are called out quick, whereas non-state actors go unnoticed.",
   },
   {
-    type: "video",
-    chapter: "06 / POLITICAL HUMOUR BY NON-STATE ACTORS",
-    number: "09",
-    title: "Creating caricatures of politicians",
-    description: "Does this make us more engaged in politics, as it gives us a reason to relate to something?",
+    type: "photo",
+    chapter: "06 / CONTEXT",
+    number: "09", 
+    imageSrc: "/images/finland.png",
+
   },
   {
-    type: "text",
-    chapter: "06 / POLITICAL HUMOUR BY NON-STATE ACTORS: AN ANALYSIS",
+    type: "video",
+    chapter: "06 / POLITICAL HUMOUR BY NON-STATE ACTORS",
     number: "10",
-    title: "Satires during Political Campaigns: made by the people",
-    body: "When forming caricatures, does that change voters' attitudes?",
-    note: "Deliberate inauthenticity can be said to enable the videos to have a positive impact on the political discourse.",
+    title: "Creating caricatures of politicians",
+    description: "Does this make us more engaged in politics, as it gives us a reason to relate to something?",
+    videoSrc: "/videos/finland-minecraft.mp4",
+  },
+  {
+    type: "video",
+    chapter: "06 / POLITICAL HUMOUR BY NON-STATE ACTORS",
+    number: "11",
+    title: "Creating caricatures of politicians",
+    description: "Does this make us more engaged in politics, as it gives us a reason to relate to something?",
+    videoSrc: "/videos/finland-minecraft2.mp4",
   },
   {
     type: "text",
     chapter: "07 / COMPARING THE TWO",
-    number: "11",
+    number: "12",
     title: "Can political humour by non-state actors create cohesion in politics?",
     body: "Yes - but to some extent.",
     note: "Media needs to be conscious of overpollution from deepfakes to not disrupt the political discourse. Equally, with the potential to deal harm, it can actually shape understanding of politics positively",
@@ -117,7 +127,7 @@ const reels = [
   {
     type: "text",
     chapter: "08 / CONCLUSION",
-    number: "12",
+    number: "13",
     title: "???",
     body: "???",
     note: "???",
@@ -151,17 +161,30 @@ function Reel({ reel }) {
                 <p className="note">{reel.note}</p>
               </>
             )}
+            {reel.type === "photo" && (
+          <div className="photo-slide">
+            <img 
+              src={reel.imageSrc} 
+              alt={reel.alt} 
+              className="full-slide-image" 
+            />
+            {reel.caption && <p className="photo-caption">{reel.caption}</p>}
+          </div>
+        )}
             {reel.type === "video" && (
             <div className="video-placeholder">
-                <div className="video-overlay">
-                  <span className="play-icon">▶</span>
-                  <p>VIDEO WILL GO HERE</p>
-              </div>
-              <div className="video-caption">
-                <p>{reel.title}</p>
-                <small>{reel.description}</small>
-              </div>
-            </div>
+    <video
+      className="video-player"
+      src={reel.videoSrc}
+      controls
+      playsInline
+      preload="metadata"
+    />
+    <div className="video-caption">
+      <p>{reel.title}</p>
+      <small>{reel.description}</small>
+    </div>
+  </div>
 )}
           </>
         )}
