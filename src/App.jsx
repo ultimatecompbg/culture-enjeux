@@ -11,11 +11,32 @@ const reels = [
   },
   {
     type: "text",
-    chapter: "01 / INTRODUCTION",
+    chapter: "01 / MOTIVATIONS",
     number: "01",
+    body: "Deepfakes penetrate in our online lives, and they're becoming increasingly visible in our everyday life. Evidently, they become a tool for any actors to perpetuate certain goals.",
+    note: "Thus, this raises the potential misuse - whether it is for geopolitical, humouristic or campaigning reasons, they present an imminent threat.",
+  },
+  {
+    type: "text",
+    chapter: "02 / INTRODUCTION",
+    number: "02",
     title: "Political manipulation, or political humour?",
     body: "A deepfake is AI-generated content that depicts a person saying or doing something they never actually said or did. [Brinck and Putkinen]",
     note: "But what happens when the fake becomes more convincing than reality?",
+  },
+  {
+    type: "text",
+    chapter: "03 / HYPOTHESIS",
+    number: "03",
+    body: "H1: political deepfakes are a harmful form of misinformation, regardless of whether they are made by politicians or non-politicians and regardless of whether they are satire or not. \nH2: AI deepfakes do disrupt political discourse and process to a large extent.",
+    note: "We agree partially with H1 and H2 - even with a benevolent intent of a deepfake, it can still be harmful",
+  },
+  {
+    type: "text",
+    chapter: "04 / METHODS",
+    number: "04",
+    body: "We primarily used qualitative methods: research papers, observations from social media, newspaper articles...",
+    note: "This ensures that we use a range of methods to get a broad overview of deepfakes.",
   },
   {
     type: "video",
@@ -23,7 +44,6 @@ const reels = [
     number: "02",
     title: "When AI deepfakes give a first glance of policy",
     description: "A first look at deepfakes used in geopolitical setting.",
-    videoSrc: "/videos/trump-gaza.mp4",
   },
   {
     type: "text",
@@ -39,7 +59,6 @@ const reels = [
     number: "04",
     title: "Just a joke?",
     description: "Can a humorous deepfake also shape political perceptions? Or is harmless internet humour? (Brinck)",
-    videoSrc: "/videos/",
   },
   {
     type: "text",
@@ -62,24 +81,22 @@ const reels = [
     chapter: "05 / POLITICAL MANIPULATION BY NON-STATE ACTORS",
     number: "07",
     title: "Do non-state actors have as much impact as politicians when creating deepfakes?",
-    description: "How does this video shape the perception of politicians?",
-    videoSrc: "/videos/bidendeepfake2.mp4",
+    description: "Does the deepfake influence voter behaviour?",
   },
   {
     type: "text",
     chapter: "05 / POLITICAL MANIPULATION BY NON-STATE ACTORS: AN ANALYSIS",
     number: "08",
-    title: "Misinformation and influencing elections",
-    body: "???",
-    note: "???",
+    title: "Growing threat of misinformation in influencing elections",
+    body: "Eroding trust in essential information - they have to be countered by more reputable source",
+    note: "Deepfakes made by politicians, gain attention + are called out quick, whereas non-state actors go unnoticed.",
   },
   {
     type: "video",
     chapter: "06 / POLITICAL HUMOUR BY NON-STATE ACTORS",
     number: "09",
-    title: "Creating caricatures of Politicians",
+    title: "Creating caricatures of politicians",
     description: "Does this make us more engaged in politics, as it gives us a reason to relate to something?",
-    videoSrc: "/videos/finland-minecraft.mp4",
   },
   {
     type: "text",
@@ -87,19 +104,20 @@ const reels = [
     number: "10",
     title: "Satires during Political Campaigns: made by the people",
     body: "When forming caricatures, does that change voters' attitudes?",
-    note: "Most people wouldn't believe it - gives it less credibility, however it's a different case for low-media-literacy people.",
+    note: "Deliberate inauthenticity can be said to enable the videos to have a positive impact on the political discourse.",
   },
   {
-    type: "video",
+    type: "text",
     chapter: "07 / COMPARING THE TWO",
     number: "11",
-    title: "Just a joke?",
-    description: "Can a humorous deepfake also shape political perceptions?",
+    title: "Can political humour by non-state actors create cohesion in politics?",
+    body: "Yes - but to some extent.",
+    note: "Media needs to be conscious of overpollution from deepfakes to not disrupt the political discourse. Equally, with the potential to deal harm, it can actually shape understanding of politics positively",
   },
   {
     type: "text",
     chapter: "08 / CONCLUSION",
-    number: "05",
+    number: "12",
     title: "???",
     body: "???",
     note: "???",
@@ -134,19 +152,16 @@ function Reel({ reel }) {
               </>
             )}
             {reel.type === "video" && (
-  <div className="video-placeholder">
-    <video
-      className="video-player"
-      src={reel.videoSrc}
-      controls
-      playsInline
-      preload="metadata"
-    />
-    <div className="video-caption">
-      <p>{reel.title}</p>
-      <small>{reel.description}</small>
-    </div>
-  </div>
+            <div className="video-placeholder">
+                <div className="video-overlay">
+                  <span className="play-icon">▶</span>
+                  <p>VIDEO WILL GO HERE</p>
+              </div>
+              <div className="video-caption">
+                <p>{reel.title}</p>
+                <small>{reel.description}</small>
+              </div>
+            </div>
 )}
           </>
         )}
