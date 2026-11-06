@@ -25,11 +25,10 @@ const reels = [
     note: "But what happens when the fake becomes more convincing than reality?",
   },
   {
-    type: "text",
+    type: "photo",
     chapter: "03 / HYPOTHESIS",
     number: "03",
-    body: "H1: political deepfakes are a harmful form of misinformation, regardless of whether they are made by politicians or non-politicians and regardless of whether they are satire or not. \nH2: AI deepfakes do disrupt political discourse and process to a large extent.",
-    note: "We agree partially with H1 and H2 - even with a benevolent intent of a deepfake, it can still be harmful",
+    imageSrc: "/images/hypothesis.png",
   },
   {
     type: "text",
@@ -40,7 +39,7 @@ const reels = [
   },
   {
     type: "video",
-    chapter: "02 / POLITICAL MANIPULATION BY POLITICIANS",
+    chapter: "05 / POLITICAL MANIPULATION BY POLITICIANS",
     number: "02",
     title: "When AI deepfakes give a first glance of policy",
     description: "A first look at deepfakes used in geopolitical setting.",
@@ -48,7 +47,7 @@ const reels = [
   },
   {
     type: "text",
-    chapter: "02 / POLITICAL MANIPULATION BY POLITICIANS: AN ANALYSIS",
+    chapter: "05 / POLITICAL MANIPULATION BY POLITICIANS: AN ANALYSIS",
     number: "03",
     title: "The problem isn't just believing in it.",
     body: "What about the most vulnerable groups? What impression does it give about US intelligence? Should we trust it?",
@@ -56,14 +55,15 @@ const reels = [
   },
   {
     type: "video",
-    chapter: "03 / POLITICAL HUMOUR BY POLITICIANS",
+    chapter: "06 / POLITICAL HUMOUR BY POLITICIANS",
     number: "04",
     title: "Just a joke?",
     description: "Can a humorous deepfake also shape political perceptions? Or is harmless internet humour? (Brinck)",
+    videoSrc: "/videos/slovakia.mp4",
   },
   {
     type: "text",
-    chapter: "03 / POLITICAL HUMOUR BY POLITICIANS: AN ANALYSIS",
+    chapter: "06 / POLITICAL HUMOUR BY POLITICIANS: AN ANALYSIS",
     number: "05",
     title: "Is humour really harmless?",
     body: "Satire can entertain, criticise and communicate political ideas. But the line between humour and manipulation is not always clear.",
@@ -71,7 +71,7 @@ const reels = [
   },
   {
     type: "text",
-    chapter: "04 / COMPARING THE TWO",
+    chapter: "07 / COMPARING THE TWO",
     number: "06",
     title: "No deepfake is neutral - it is always constructed by ideas and perspectives",
     body: "Meaning depends on who creates the content, who sees it, how it circulates and how audiences interpret it.",
@@ -79,7 +79,7 @@ const reels = [
   },
   {
     type: "video",
-    chapter: "05 / POLITICAL MANIPULATION BY NON-STATE ACTORS",
+    chapter: "07 / POLITICAL MANIPULATION BY NON-STATE ACTORS",
     number: "07",
     title: "Do non-state actors have as much impact as politicians when creating deepfakes?",
     description: "Does the deepfake influence voter behaviour?",
@@ -87,7 +87,7 @@ const reels = [
   },
   {
     type: "text",
-    chapter: "05 / POLITICAL MANIPULATION BY NON-STATE ACTORS: AN ANALYSIS",
+    chapter: "07 / POLITICAL MANIPULATION BY NON-STATE ACTORS: AN ANALYSIS",
     number: "08",
     title: "Growing threat of misinformation in influencing elections",
     body: "Eroding trust in essential information - they have to be countered by more reputable source",
@@ -95,14 +95,14 @@ const reels = [
   },
   {
     type: "photo",
-    chapter: "06 / CONTEXT",
+    chapter: "08 / CONTEXT",
     number: "09", 
     imageSrc: "/images/finland.png",
 
   },
   {
     type: "video",
-    chapter: "06 / POLITICAL HUMOUR BY NON-STATE ACTORS",
+    chapter: "08 / POLITICAL HUMOUR BY NON-STATE ACTORS",
     number: "10",
     title: "Creating caricatures of politicians",
     description: "Does this make us more engaged in politics, as it gives us a reason to relate to something?",
@@ -110,7 +110,7 @@ const reels = [
   },
   {
     type: "video",
-    chapter: "06 / POLITICAL HUMOUR BY NON-STATE ACTORS",
+    chapter: "08 / POLITICAL HUMOUR BY NON-STATE ACTORS",
     number: "11",
     title: "Creating caricatures of politicians",
     description: "Does this make us more engaged in politics, as it gives us a reason to relate to something?",
@@ -118,7 +118,7 @@ const reels = [
   },
   {
     type: "text",
-    chapter: "07 / COMPARING THE TWO",
+    chapter: "09 / COMPARING THE TWO",
     number: "12",
     title: "Can political humour by non-state actors create cohesion in politics?",
     body: "Yes - but to some extent.",
@@ -126,11 +126,9 @@ const reels = [
   },
   {
     type: "text",
-    chapter: "08 / CONCLUSION",
+    chapter: "10 / CONCLUSION",
     number: "13",
-    title: "???",
-    body: "???",
-    note: "???",
+    body: "Deepfakes influence the political landscape - psyops, seeks to influence targetted countries. Satire, therefore influence their parties and country, whereas non-state actors can sometimes aim to educate. Overall, they disrupt political processes, even with benevolent intentions.",
   },
 ];
 
